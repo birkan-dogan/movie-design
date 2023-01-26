@@ -138,7 +138,7 @@ scale-down - the image is scaled down to the smallest version of none or contain
 .container {
   background-color: #151515;
   color: white;
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
 }
 
 .content-container {
@@ -181,5 +181,94 @@ background-image: linear-gradient(to bottom right, red, yellow);
   border: none;
   outline: none;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.movie-list-container {
+  padding: 20px;
+  margin: 50px 30px 0;
+}
+
+.movie-list-wrapper {
+  position: relative;
+}
+
+.movie-list {
+  display: flex;
+  align-items: center;
+  height: 300px;
+  gap: 30px;
+}
+
+.movie-list-item {
+  position: relative;
+}
+
+.movie-list-item-img {
+  width: 270px;
+  height: 200px;
+  object-fit: cover;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+
+.movie-list-item:hover .movie-list-item-img {
+  transform: scale(1.2);
+  margin: 0 30px;
+  opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-button {
+  opacity: 1;
+}
+
+.movie-list-item-title {
+  background-color: #333;
+  padding: 0 10px;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.movie-list-item-desc {
+  background-color: #333;
+  padding: 10px;
+  font-size: 14px;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+  opacity: 0;
+  width: 230px;
+  transition: all 1s;
+  cursor: pointer;
+}
+
+.movie-list-item-button {
+  padding: 10px;
+  background-color: #4dbf00;
+  color: white;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 15px;
+  left: 60px;
+  opacity: 0;
+}
+
+.arrow {
+  font-size: 120px;
+  position: absolute;
+  top: 90px;
+  right: 0;
+  color: lightblue;
+  opacity: 0.5;
   cursor: pointer;
 }
