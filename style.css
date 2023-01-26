@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  font-family: "Sen", sans-serif;
+}
+.navbar-container {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 100%;
+  color: white;
+}
+
+/*
+Let all the flexible items be the same length, regardless of its content:
+
+The `flex` property is a shorthand property for:
+
+flex-grow
+flex-shrink
+flex-basis
+The `flex` property sets the flexible length on flexible items.
+*/
+
+.logo-container {
+  flex: 1;
+}
+
+.logo {
+  font-size: 30px;
+  color: #4dbf00;
+}
+
+.menu-container {
+  flex: 6;
+}
+
+.menu-list {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+}
+
+.menu-list-item.active {
+  font-weight: bold;
+}
+
+.profile-container {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.profile-text-container {
+  margin: 0 20px;
+}
+
+.profile-picture {
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+/*
+The CSS `object-fit` property is used to specify how an <img> or <video> should be resized to fit its container.
+
+The object-fit property can take one of the following values:
+
+fill - This is default. The image is resized to fill the given dimension. If necessary, the image will be stretched or squished to fit
+contain - The image keeps its aspect ratio, but is resized to fit within the given dimension
+cover - The image keeps its aspect ratio and fills the given dimension. The image will be clipped to fit
+none - The image is not resized
+scale-down - the image is scaled down to the smallest version of none or contain
+
+*/
+
+.toggle {
+  width: 40px;
+  height: 20px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.toggle-ball {
+  width: 18px;
+  height: 20px;
+  background-color: black;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.toggle-icon {
+  color: goldenrod;
+}
+
+.sidebar {
+  width: 50px;
+  height: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
+}
