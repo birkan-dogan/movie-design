@@ -118,4 +118,68 @@ scale-down - the image is scaled down to the smallest version of none or contain
   background-color: black;
   position: fixed;
   top: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  align-items: center;
+  gap: 40px;
+}
+
+.left-menu-icon {
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.left-menu-icon:hover {
+  color: #4dbf00;
+}
+
+.container {
+  background-color: #151515;
+  color: white;
+  height: calc(100vh - 50px);
+}
+
+.content-container {
+  margin-left: 50px;
+}
+
+.featured-content {
+  height: 50vh;
+  padding: 50px;
+}
+/*
+
+CSS gradients let you display smooth transitions between two or more specified colors.
+
+CSS defines three types of gradients:
+
+Linear Gradients (goes down/up/left/right/diagonally)
+Radial Gradients (defined by their center)
+Conic Gradients (rotated around a center point)
+
+background-image: linear-gradient(to bottom right, red, yellow);
+
+*/
+
+.featured-title {
+  width: 200px;
+}
+
+.featured-desc {
+  width: 500px;
+  color: lightgray;
+  margin: 30px 0;
+}
+
+.featured-button {
+  background-color: #4dbf00;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  cursor: pointer;
 }
