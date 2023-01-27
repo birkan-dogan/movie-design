@@ -7,8 +7,10 @@ arrows.forEach((arrow, index) => {
   let clickCounter = 0;
 
   arrow.addEventListener("click", () => {
+    const ratio = Math.floor(window.innerWidth / 270); // 270 is stands for image width
+
     clickCounter++;
-    if (itemNumber - (4 + clickCounter) > 0) {
+    if (itemNumber - (4 + clickCounter) + (4 - ratio) > 0) {
       movieLists[index].style.transform = `translateX(${
         movieLists[index].computedStyleMap().get("transform")[0].x.value - 300
       }px)`;
@@ -18,6 +20,8 @@ arrows.forEach((arrow, index) => {
     }
   });
 });
+
+// toggle
 
 const ball = document.querySelector(".toggle-ball");
 
